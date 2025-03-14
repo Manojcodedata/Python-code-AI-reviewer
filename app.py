@@ -2,7 +2,8 @@ import streamlit as st
 import google.generativeai as genai
 
 # Configure Gemini AI with API Key
-genai.configure(api_key="api key")
+API_KEY = st.secrets['key']
+genai.configure(api_key="API_KEY")
 
 # System instruction for AI
 system_prompt = """You are an expert Python code reviewer with deep knowledge of best practices, debugging, optimization, and clean coding standards. Your task is to carefully analyze the provided Python code, identifying potential errors, inefficiencies, and areas for improvement.
